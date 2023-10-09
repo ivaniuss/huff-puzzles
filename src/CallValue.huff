@@ -9,5 +9,15 @@
 */
 
 #define macro MAIN() = takes(0) returns(0) {
-    
+    //store msg.value in memory at offset 0
+    callvalue 
+    0x00
+    mstore
+
+    // return msg.value
+    // return 32 bytes of memory starting at offset 0
+    0x20
+    0x00
+    return
+   
 }
